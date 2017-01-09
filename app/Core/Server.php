@@ -18,11 +18,11 @@ class Server
     public function __construct()
     {
         // check what this does: chdir(__DIR__);
-        $this->startTime = time();
+        // $this->startTime = time();
         $this->Discord = new Discord(['token' => Config::read('discord', 'token')]);
     }
 
-    public function setErrorHandler()
+    private function setErrorHandler()
     {
         $this->Discord->on(
             'error', function($error) {
@@ -33,7 +33,7 @@ class Server
         return true;
     }
 
-    public function setReconnectSate()
+    private function setReconnectSate()
     {
         $this->Discord->on(
             'reconnecting', function($message) {
@@ -48,7 +48,7 @@ class Server
         return true;
     }
 
-    public function setReadyState()
+    private function setReadyState()
     {
          $this->Discord->on('ready', function ($discord) {
 
