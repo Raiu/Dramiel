@@ -1,6 +1,0 @@
-twisted
-arrow
-pysqlite
-eveapi
-beautifulsoup
-requests

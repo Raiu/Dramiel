@@ -25,16 +25,13 @@ SOFTWARE.
 
 /**
  * 
- */
+*/
 require __DIR__.'/vendor/autoload.php';
 
 /**
  * 
  */
-require_once __DIR__.'/app.php';
-
-use Dramiel\App\App;
-$app = new App();
+$app = require_once __DIR__.'/app/bootstrap.php';
 
 /**
  * 
